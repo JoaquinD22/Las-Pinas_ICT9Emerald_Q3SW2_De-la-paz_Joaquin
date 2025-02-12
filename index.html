@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: darkslategrey;
+            color: white;
+            
+        }
+
+        form{
+            text-align: center;
+            border-style: dashed;
+            background-color: teal;
+            border-radius: 5px;
+
+
+        } 
+
+        .button{
+            text-align: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conatiner mt-5">
+        <h1 style="text-align: center;">Calculator for noobies </h1>
+    <br>
+            <br>
+            <br>
+            <details ontoggle="message()" style="text-align: center;">
+                <summary>Instruction</summary>
+                <i>Enter 2 numbers to get the answer to your problems</i>
+            </details>
+                <br>
+                <br>
+
+        <div class="container">
+        <form style="text-align: center;">
+            <br>
+            <br>
+            <h3>Enter the value of a: </h3>
+            <br>
+            <input type="number" id="num1" placeholder="place ur number here lol" cols="20">
+            <br>
+            <br>
+            <br>
+            <h3>Enter the value of b:</h3>
+            <br>
+            <input type="number" id="num2" placeholder="place ur 2nd number here lol">
+            <br>
+            <br>
+            <br>
+            <h3>The one, and only, Answer!!!!</h3>
+            <br>
+            <h4 id="Result"></h4>
+        </form>
+
+    <script>
+        
+
+        function product(){
+            var multiply1 = document.getElementById ("num1").value
+            var multiply2 = document.getElementById ("num2").value
+            var ans = Number(multiply1) * Number(multiply2);
+            document.getElementById('Result').innerHTML = 'Answer is' + ' ' + ans;
+        }
+
+            function exponent(){
+            var multiply1 = document.getElementById ("num1").value
+            var multiply2 = document.getElementById ("num2").value
+            var ans = Number(multiply1) ** Number(multiply2);
+            document.getElementById('Result').innerHTML = 'Answer is' + ' ' + ans;
+        }
+
+        function mod(){
+            var divide1 = document.getElementById ("num1").value
+            var divide2 = document.getElementById ("num2").value
+            var ans = Number(divide1) / Number(divide2);
+            document.getElementById('Result').innerHTML = 'Answer is' + ' ' + ans;
+        }
+
+        function equal(){
+            var value1 = document.getElementById ("num1").value
+            var value2 = document.getElementById ("num2").value
+            var ans = Number(1) == Number(2);
+            document.getElementById('Result').innerHTML = 'Answer is' + ' ' + ans;
+        }
+
+        
+
+
+    </script>
+    </div>
+    <br>
+    <br>
+<div class="button">
+    <button type="button" onclick="product()" class="btn btn-success">Product of a and b.</button>
+    <button type="button" onclick="exponent()" class="btn btn-primary">a raise to b.</button>
+    <button type="button" onclick="mod()" class="btn btn-warning">Get the remainder.</button>
+    <button type="button" onclick="equal()" class="btn btn-danger">Check if a is equal to b.</button>
+</div>    
+</div>   
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="text-align: center;">© Joaquin Matteo A. De la paz company</p>
+<p style="text-align: center;">Note: I wasn't feeling well so thats why it looks rushed D:</p>
+</body>
+</html>
